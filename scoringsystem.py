@@ -62,6 +62,32 @@ def save_button():
 
 def return_button():
     print("return")
+    def save_button(): 
+        team_name=team_entry.get()
+
+        #get the members
+        members = []
+        members.append(Member1.get())
+        members.append(Member2.get())
+        members.append(Member3.get())
+        members.append(Member4.get())
+        members.append(Member5.get())
+
+        #remove the empty ones
+        clean_members = [ ]
+        for m in members:
+            if m != "":
+                clean_members.append(m)
+
+        #control
+        if team 
+
+
+
+
+
+        
+    
 
 
 root = tk.Tk()
