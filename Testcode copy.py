@@ -69,3 +69,64 @@ root.title("Tournament Scoring System")
 root.geometry("600x500")
 add_team_screen()
 root.mainloop() 
+
+
+def save_button():
+    print("save")
+    #Save info in file.
+        #read file - get data - change data - overwrite file
+
+    def return_button():
+    print("return")
+
+
+
+
+    team_name = team_entry.get()
+    ...
+
+    members = [
+        Member1.get(),
+        Member2.get(),
+        Member3.get(),
+        Member4.get(),
+        Member5.get()
+    ]
+
+    clean_members = []
+    for m in members:
+        if m != "":
+            clean_members.append(m)
+
+    if team_name == "":
+        messagebox.showerror("Error","Team name required!")
+        return
+
+    teams[team_name] = clean_members
+    team_scores[team_name] = 0
+
+    messagebox.showinfo("Success", "Team added!") 
+    team_name=team_entry.get()
+
+        #get the members
+    members = []
+    members.append(Member1.get())
+    members.append(Member2.get())
+    members.append(Member3.get())
+    members.append(Member4.get())
+    members.append(Member5.get())
+
+        #remove the empty ones
+clean_members = [ ]
+for m in members:
+            if m != "":
+                clean_members.append(m)
+
+        #control
+if team_name == " ":
+            messagebox.showerror("Error","Team name required!")
+return
+        
+        #save in dictinoary 
+teams[team_name] = clean_members
+team_scores[team_name] = 0
