@@ -13,7 +13,9 @@ events = []
 # points for each place
 points = {1: 10, 2: 7, 3: 5, 4: 3, 5: 1}
 
-
+def clear_screen():
+    for widget in root.winfo_children():
+        widget.destroy()
 #add team screen
 def add_team_screen():
 
@@ -70,7 +72,8 @@ def add_team_screen():
         teams[team_name] = clean_members
         team_scores[team_name] = 0
 
-        messagebox.showinfo("Success", "Team added!")
+        messagebox.showinfo("Success", "Team added!")  
+        clear_screen()
 
     def return_button():
         print("return")
@@ -126,14 +129,27 @@ def add_event_screen():
     back = tk.Button(root, text="return", anchor='center', command=return_button)
     back.pack() 
 
+    #enter result screen
+    def enter_result_screen():
+        clear_screen()
+        if len(events) == 0: 
+            messagebox.showerror ("Error", "No events added yet!")
+        return 
+    
+    tk.Label(root, text="Enter Results", font=("Arial", 14, "bold")).pack(pady=10)
+    tk.label (root, text="Select Event:") .pack()
+    event_names = [e[0] for e in events]
+    event_var = tk.StringVar(root)
+    event_var.set(event_names[0])
+    tk.OptionMenu(root, event_var, *event_names).pack()
+    
 
 
 
 
 
 
-
-
+#start 
 root = tk.Tk()
 root.title("Tournament Scoring System")
 root.geometry("600x500")
