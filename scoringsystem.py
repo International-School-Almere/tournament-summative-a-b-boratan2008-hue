@@ -142,6 +142,74 @@ def add_event_screen():
     event_var = tk.StringVar(root)
     event_var.set(event_names[0])
     tk.OptionMenu(root, event_var, *event_names).pack()
+
+    tk.Label(root, text="select event:").pack()
+    event_names=[e[0] for e in events]
+    event_var=tk.StringVar(root)
+    event_var.set(event_names[0])
+    tk.OptionMenu(root, event_var, *event_names).pack()
+
+    tk.Label(root, text="Rankings (1st to 5th):").pack(pady=5) 
+    tk.Label(root, text="1st=10pts  2nd=7pts  3rd=5pts  4th=3pts  5th=1pt", font=("Arial", 8)).pack()
+
+    Rank1=tk.Entry(root,width=25)
+    Rank1.pack()
+    tk.Label(root, text="^ 1st place").pack()
+
+    Rank2=tk.entr(root,width=25)
+    Rank2.pack()
+    tk.Label(root, text="^ 2nd place").pack() 
+
+    Rank3=tk.entr(root,width=25)
+    Rank3.pack()
+    tk.Label(root, text="^ 3nd place").pack() 
+
+    Rank4=tk.entr(root,width=25)
+    Rank4.pack()
+    tk.Label(root, text="^ 4nd place").pack() 
+
+    Rank5=tk.entr(root,width=25)
+    Rank5.pack()
+    tk.Label(root, text="^ 5nd place").pack() 
+
+    def save_button():
+        chosen = event_var.get()
+        #find the event type 
+        etype="Individual"
+        for e in events:
+            if e[0] == chosen:
+                etype = e[1]
+                rankings =[Rank1.get(),Rank2.get()Rank3.get()Rank4.get()Rank5.get()]
+alreadey_ranked_one=[]
+
+for rank, name in in enumerate(rankings, 1):
+    name = name.strip()
+    if name == "":
+                continue
+    
+    if name in alreadey_ranked_one:
+        messagebox.showwarning("Warning", name + " already_ranked_one!")
+        continue
+    if etype == "Individual":
+        if name not in individuals:
+         messagebox.showwarning("Warning", name + " not found!")
+
+         continue
+        individuals[name]=individuals[name] + points[rank]
+    else:
+        if name not in team_scores
+        messagebox.showwarning ("Warning",name+ "not found!")
+
+        continue
+    team_scores[name]= team_scores[name]+points[rank]
+    alreadey_ranked_one.append(name)
+
+
+    
+
+    
+ 
+
     
 
 

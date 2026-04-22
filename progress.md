@@ -5,23 +5,27 @@
 > 
 ---
 
-# 1. Project Overview
+# 1. Project Overview 
 
 ## Project Title
-[Write your project title here]
+[scorinsystem.py]
 
 ## Project Description
-[Briefly explain what the project is about]
+[Its a tournament scoring sytem built in phyton visual stuiido code also using Tkinter the program will 
+also allow organisers to add team and also individual participant like for example create events, enter results and view a leaderboard points are decided based on the ranking positions like 1st=10, 2nd=7, 3rd=5, 4th=3, 5th=1]
 
 ## Start Date
-[Unknown / add later]
+[ 30 march 2026]
 
 ## Target End Date
-[Unknown / add later]
+[ add later]
 
 ## File list.
-
+scoring system.py
 ## (Dependencies) API / library / module list.
+tkinter (built into Python, used for GUI)
+tkinter.messagebox (used for error and success popups)
+tkinter.ttk (imported but available for future use) 
 ---
 
 
@@ -36,12 +40,13 @@
 **Focus:** [What did you work on?]
 
 ### Problems / Challenges
-- 
-- 
+- after pressing save for the team screen nothing happend visually i was not able to see it 
+- the screan was not clearing itself so new screen couldnt load
 
 ### Solutions / Actions Taken
-- 
-- 
+- for the fix this i added a clear_screen()function that can destroy all widgets on the root windows
+- also added clesr screen fucntion before every screen function
+- also i added main_menu()calls inside each save and return button so navigation works 
 
 ### Evidence
 - [Added code]
@@ -51,9 +56,9 @@
 - [Uploaded image/screenshot]
 
 ### Reflection
-- What went well?
-- What needs improvement?
-- What did I learn?
+- What went well?: the navigation is now working good between all screens
+- What needs improvement?: the main menu might look better with some more styling
+- What did I learn?: i learned thatt= tkinter is not directly clearing the screen you have to do it manually with coding. 
 
 ---
 
