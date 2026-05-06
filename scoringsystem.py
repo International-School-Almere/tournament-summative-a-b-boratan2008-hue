@@ -9,6 +9,7 @@ teams = {}
 individuals = {}
 team_scores = {}
 events = []
+rankings = []
 
 # points for each place
 points = {1: 10, 2: 7, 3: 5, 4: 3, 5: 1}
@@ -173,16 +174,21 @@ def add_event_screen():
     tk.Label(root, text="^ 5nd place").pack() 
 
     def save_button():
+        global rankings
         chosen = event_var.get()
         #find the event type 
         etype="Individual"
         for e in events:
             if e[0] == chosen:
                 etype = e[1]
-                rankings =[Rank1.get(),Rank2.get()Rank3.get()Rank4.get()Rank5.get()]
-alreadey_ranked_one=[]
 
-for rank, name in in enumerate(rankings, 1):
+
+                rankings=[Rank1.get(), Rank2.get(), Rank3.get(),Rank4.get(),Rank5.get()]
+        
+                alreadey_ranked_one=[]
+        
+
+for rank, name  in enumerate(rankings, 1):
     name = name.strip()
     if name == "":
                 continue
@@ -197,12 +203,28 @@ for rank, name in in enumerate(rankings, 1):
          continue
         individuals[name]=individuals[name] + points[rank]
     else:
-        if name not in team_scores
-        messagebox.showwarning ("Warning",name+ "not found!")
+        if name not in team_scores:
+           messagebox.showwarning ("Warning",name+ "not found!")
 
         continue
     team_scores[name]= team_scores[name]+points[rank]
     alreadey_ranked_one.append(name)
+
+    messageboxs.howinfo("Success", "Results saved!")
+    main_menu()
+    def return_button():
+        print("return")
+        
+ 
+    save = tk.Button(root, text="save", anchor='center', command=save_button)
+    save.pack() 
+    back=tk.Button(root, text="return", anchor='center', command=return_button) 
+    back.pack()
+
+#Leader board screen 
+def leaderboard_screen():
+    clear_screen()
+    tk.Label(root)
 
 
     
