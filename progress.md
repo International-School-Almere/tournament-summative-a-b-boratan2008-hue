@@ -34,20 +34,268 @@ tkinter.ttk (imported but available for future use)
 > Add a new session at the top each time you work.
 
 ---
+## Session [10]
+**Date:** [ 7 May 2026]  
+**Time spent:** [45 min]  
+**Focus:** [i fixed remaining errors and writing progress journal]
+
+### Problems / Challenges
+- i still had some left errors from the previous sesion
+-  My Progress journal needed to be updated with all sessions
+
+### Solutions / Actions Taken
+- fixed old errors in the code 
+- Updated progress journal with all session dates and details
+
+
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well?: my program right now is so much more cleaner and more complete 
+- What needs improvement?: I need to finish leaderboard and test the full program again
+- What did I learn?: i learned that keeping a journal makes it easier to track what went wrong and why 
+
+---
+
+## Session [09]
+**Date:** [6 may 2026]  
+**Time spent:** [1 hour]  
+**Focus:** [I focus on fixing all erros across all screens]
+
+### Problems / Challenges
+- Multiple screens had tk.label with lowercase l causing AttributeError 
+- tk.entr typo on Rank2 to Rank5 entries
+- enter result screen was defined inside 
+- add_event_screen instead of outside
+- messageboxs.howinfo typo causing results not to save
+
+
+### Solutions / Actions Taken
+- Fixed all tk.label to tk.Label with capital L my teacher help me a lot 
+
+- Fixed all tk.entr to tk.Entry
+_ Moved enter_result_screen outside of add event screen againmy teacher help with it 
+_Fixed messageboxs.howinfo to messagebox showinfo it was a little spelling mistake
+_Fixed all indentation errors throughout the file
+
+
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well? After fixing the errors the program ran without crashing 
+- What needs improvement? Need to finish the leaderboard screen
+- What did I learn? Even the small typos like lowercase letters can break the whole program 
+
+---
+## Session [08]
+**Date:** [22 april 2026]  
+**Time spent:** [1 hour]  
+**Focus:** [i focus on continue code and fixing bugs]
+
+### Problems / Challenges
+- rankings list had missing commas between .get() calls
+- already_ranked variable was outside the function so indentation was wrong
+
+### Solutions / Actions Taken
+- i added missing commas to the list
+- I fixed indentation of already_ranked and the for loop
+
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well?  Points calculation logic started working after fixing indentation 
+- What needs improvement?  Still some errors left to fix
+- What did I learn?  Missing commas in lists cause SyntaxErrors that are hard to spot 
+---
+## Session [07]
+**Date:** [21 April 2026]  
+**Time spent:** [1 hour]  
+**Focus:** [Writing the enter results screen]
+
+### Problems / Challenges
+-  I needed to find the event type before assigning points
+-  Had to prevent the same name from being ranked twice
+
+
+### Solutions / Actions Taken
+-  I used a for loop to find the event type from the events list
+
+- Used an already_ranked list to track who has already been given points
+
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well? The logic for finding event type worked correctly 
+- What needs improvement? I need to test with the actual data 
+- What did I learn? i learned how mostly things work in this stage
+
+
+## Session [06]
+**Date:** [20 April 2026]  
+**Time spent:** [30 min]  
+**Focus:** [Adding the event type dropdown and fixing event screen errors]
+
+### Problems / Challenges
+-  Wrote tk.label with lowercase l which caused an AttributeError
+-  Duplicate event names were not being checked properly
+
+
+### Solutions / Actions Taken
+-  Fixed tk.label to tk.Label
+-  i save events as tuples (name, type) so both stay together
+- Added a for loop to check if event name already exists before saving
+
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well? The dropdown menu for event type worked correctly
+- What needs improvement? Return button still just prints, needs to go to main menu 
+- What did I learn?  I learned how to use tk.OptionMenu and tk.StringVar for dropdowns
+
+
+## Session [05]
+**Date:** [15 April 2026]  
+**Time spent:** [39 min]  
+**Focus:** [Writing the add event screen]
+
+### Problems / Challenges
+-  Needed a dropdown menu for event type which I had not used before
+-  enter_result_screen was accidentally written inside add_event_screen
+
+### Solutions / Actions Taken
+-  I used tk.StringVar and tk.OptionMenu for the dropdown
+-  Moved enter_result_screen outside to be its own function
+
+
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well?  Dropdown worked after learning how StringVar and OptionMenu work together
+- What needs improvement? Need to add the enter results screen
+- What did I learn? OptionMenu needs a StringVar to store the selected value
+## Session [04]
+**Date:** [10 April 2026]  
+**Time spent:** [1 hour]  
+**Focus:** [Adding the individual screen and fixing navigation]
+
+### Problems / Challenges
+-  Return button was just printing return instead of going back to main menu
+-  Screen was not clearing properly between screens
+
+
+### Solutions / Actions Taken
+-  i changed return_button to call main_menu() instead of print
+-  i really make sure clear_screen() is called at the start of every screen function
+
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well? The navigation between screens started working properly
+- What needs improvement? i need to add more screens
+- What did I learn? I learned every screen function needs clear_screen() at the start otherwise widgets stack up
+
+
+## Session [03]
+**Date:** [7 April 2026]  
+**Time spent:** [50 min]  
+**Focus:** [Fixing errors from previous session and adding main menu]
+
+### Problems / Challenges
+- save_button and return_button were defined after the buttons that called them
+- Indentation errors inside the save function
+
+
+### Solutions / Actions Taken
+-  I moved function definitions above the button calls
+-  Fixed all indentation errors using consistent 4 spaces
+-  Add main_menu function with buttons for each screen
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well?  Main menu loaded correctly after fixes
+- What needs improvement?  Individual and event screens still need to be written
+- What did I learn? I learned that functions must be defined before they are called in Tkinter button commands
+
+## Session [02]
+**Date:** [31 march 2026]  
+**Time spent:** [1 hour]  
+**Focus:** [Building the add team screen]
+
+### Problems / Challenges
+- Missing quotation mark on a Label line stopped the whole program from running
+- Wrote from tkinter import ttv instead of ttk which caused an ImportError
+- After i pressed save nothing happened visually because clear_screen was missing
+
+
+### Solutions / Actions Taken
+-  Fixed the missing quotation mark by reading the error message carefully
+-  Corrected ttv to ttk
+-  Added clear_screen() function and called it inside save_button 
+### Evidence
+- [Added code]
+- [Updated design]
+- [Created sketch]
+- [Researched source]
+- [Uploaded image/screenshot]
+
+### Reflection
+- What went well?  Once errors were fixed the team data saved correctly to the dictionary
+- What needs improvement? Return button needs to go back to main menu
+- What did I learn? Small typos like ttv instead of ttk cause ImportErrors that stop the whole program
 ## Session [01]
-**Date:** [Add date later]  
-**Time spent:** [e.g. 45 min / 2 hours]  
-**Focus:** [What did you work on?]
+**Date:** [30 March 2026]  
+**Time spent:** [50 min]  
+**Focus:** [Initial setup and data structures]
 
 ### Problems / Challenges
-- after pressing save for the team screen nothing happend visually i was not able to see it 
-- the screan was not clearing itself so new screen couldnt load
+- Needed to decide how to store teams, individuals, events and scores
+- Needed to choose a points system for the tournament
 
 ### Solutions / Actions Taken
-- for the fix this i added a clear_screen()function that can destroy all widgets on the root windows
-- also added clesr screen fucntion before every screen function
-- also i added main_menu()calls inside each save and return button so navigation works 
-
+- Used dictionaries for teams, individuals and team_scores
+Used a list for events
+-  Defined a points dictionary mapping rank to points (1st=10, 2nd=7, 3rd=5, 4th=3, 5th=1)
+-  I decided to use Tkinter for the GUI since it comes built into Python with no extra install needed
 ### Evidence
 - [Added code]
 - [Updated design]
@@ -56,66 +304,9 @@ tkinter.ttk (imported but available for future use)
 - [Uploaded image/screenshot]
 
 ### Reflection
-- What went well?: the navigation is now working good between all screens
-- What needs improvement?: the main menu might look better with some more styling
-- What did I learn?: i learned thatt= tkinter is not directly clearing the screen you have to do it manually with coding. 
-
----
-
-## Session [02]
-**Date:** [Add date later]  
-**Time spent:** [e.g. 45 min / 2 hours]  
-**Focus:** [What did you work on?]
-
-### Problems / Challenges
-- 
-- 
-
-### Solutions / Actions Taken
-- 
-- 
-
-### Evidence
-- [Added code]
-- [Updated design]
-- [Created sketch]
-- [Researched source]
-- [Uploaded image/screenshot]
-
-### Reflection
-- What went well?
-- What needs improvement?
-- What did I learn?
-
----
-## Session [02]
-**Date:** [Add date later]  
-**Time spent:** [e.g. 45 min / 2 hours]  
-**Focus:** [What did you work on?]
-
-### Problems / Challenges
-- 
-- 
-
-### Solutions / Actions Taken
-- 
-- 
-
-### Evidence
-- [Added code]
-- [Updated design]
-- [Created sketch]
-- [Researched source]
-- [Uploaded image/screenshot]
-
-### Reflection
-- What went well?
-- What needs improvement?
-- What did I learn?
-
----
-
-
+- What went well? Data structures were straightforward to plan and set up
+- What needs improvement? Need to start building the actual screens
+- What did I learn? Planning the data structures first made it easier to build the rest of the program
 # 7. Problems and Fixes
 
 | Problem | Cause | Fix | Status |
