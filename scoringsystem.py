@@ -272,8 +272,43 @@ def enter_result_screen():
 # ── LEADERBOARD SCREEN ───────────────────────────────────
 def leaderboard_screen():
     clear_screen()
- 
+
     tk.Label(root, text="Leaderboard", font=("Arial", 14, "bold")).pack(pady=10)
+
+    if len(individuals) > 0:
+        tk.Label(root, text="Individuals:", font=("Arial", 11, "bold")).pack()
+        sorted_ind = sorted(individuals.items(), key=lambda x: x[1], reverse=True)
+        rank = 1
+        for name, score in sorted_ind:
+            tk.Label(root, text=str(rank) + ".  " + name + "  -  " + str(score) + " points").pack()
+            rank = rank + 1
+
+    if len(team_scores) > 0:
+        tk.Label(root, text="Teams:", font=("Arial", 11, "bold")).pack(pady=5)
+        sorted_teams = sorted(team_scores.items(), key=lambda x: x[1], reverse=True)
+        rank = 1
+        for name, score in sorted_teams:
+            tk.Label(root, text=str(rank) + ".  " + name + "  -  " + str(score) + " points").pack()
+            rank = rank + 1
+
+    if len(individuals) == 0 and len(team_scores) == 0:
+        tk.Label(root, text="No participants yet").pack()
+
+    back = tk.Button(root, text="return", anchor='center', command=main_menu)
+    back.pack()
+
+
+#THE main menu 
+def main_menu():
+    clear_screen()
+ 
+    tk.Label(root, text="Tournament Scoring System", font=("Arial", 16, "bold")).pack(pady=20)
+ 
+    tk.Button(root, text="Add Team", width=20, command=add_team_screen).pack(pady=5)
+    tk.Button(root, text="Add Individual", width=20, command=add_individual_screen).pack(pady=5)
+    tk.Button(root, text="Add Event", width=20, command=add_event_screen).pack(pady=5)
+    tk.Button(root, text="Enter Results", width=20, command=enter_result_screen).pack(pady=5)
+    tk.Button(root, text="View Leaderboard", width=20, command=leaderboard_screen).pack(pady=5)
 
     
 
@@ -291,5 +326,5 @@ def leaderboard_screen():
 root = tk.Tk()
 root.title("Tournament Scoring System")
 root.geometry("600x500")
-add_team_screen()
+main_menu()
 root.mainloop()
